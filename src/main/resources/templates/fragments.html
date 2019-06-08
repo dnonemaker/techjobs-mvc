@@ -28,7 +28,7 @@
     </div>
 
     <div th:fragment="results">
-        <p th:text="${jobs.size()} + ' Jobs'"></p>
+        <p th:text="${jobs.size()} + ' Job(s)'"></p>
         <table class="job-listing" th:each="job : ${jobs}">
             <tr th:each="key : ${job.keySet()}">
 

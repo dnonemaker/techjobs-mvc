@@ -37,7 +37,11 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+
     <div th:if="${jobs}">
+        <h1 th:if="${#strings.equals(selectedColumn,'all')}">ALL</h1>
+        <h1 th:unless="${#strings.equals(selectedColumn,'all')}"
+            th:text="${selectedColumn} + ' = ' + ${searchTerm}"></h1>
         <div th:replace="fragments :: results"></div>
     </div>
 
